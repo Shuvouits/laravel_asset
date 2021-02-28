@@ -1,0 +1,6 @@
+  $a=[];
+        foreach($all_category as $key => $item){
+            $p = Product::where('category_id',$item->id)->count();
+            $a[$key] = $p;
+        }
+        dd($a);exit();
